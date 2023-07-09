@@ -66,8 +66,6 @@ module.exports = class ProductoDAOImplement {
     }
 
     //busca si existe un producto con un nombre identico en la bbdd (duplicado) y devuelve T/F
-    //esta funcion no tiene demasiado sentido por como es la app y la bbdd, aun asi se incluye ya que los nombres se meteran de forma general 
-    //y no especificando marcas o tipos concretos. ej: manzanas y no manzanas- carrefour- tamaño mediano
     static async duplicado(nombre){
         console.log("estamos viendo duplicados");
         let query="select productos.id from productos where productos.nombre = '" + nombre + "'";
